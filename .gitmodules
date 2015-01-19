@@ -1,0 +1,3 @@
+[submodule "wp-content/themes/boilerdemo"]
+	path = wp-content/themes/boilerdemo
+	url = git@github.com:DD9/boiler.git
