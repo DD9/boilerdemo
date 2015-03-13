@@ -60,6 +60,4 @@ get_header(); ?>
 	<?php get_sidebar( 'content' ); ?>
 </div><!-- #main-content -->
 
-<?php
-get_sidebar();
-get_footer();
+<h3>Downstream change directly in boiler demo site repo</h3>
