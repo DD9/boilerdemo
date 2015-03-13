@@ -10,6 +10,9 @@
  * 
  * Hey, I am a change from the master !!!
  * Hey, I am a change to the practice repo, can you update your subtrees?
+ * Hey, I am an upstream change, how well do I play with my super repos?
+ * One more change to build up a little commit history
+ * Last one so there are several to test squash
  *
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
