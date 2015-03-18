@@ -1,9 +1,20 @@
 # dd9boiler
-Boiler dev site
+Boiler dev and demo site: http://boiler.dd9.com
 
 ----------
 
-## Notes on Initial Setup
+## Current Config Notes
+
+**boilerdemo** Boiler theme official submodule:
+
+`wp-content/themes/boilerdemo`
+
+**boilerplay** Boiler sandbox theme subtree for experimentation:
+
+`wp-content/themes/boilerplay`
+
+
+## Notes on Initial Setup 
 
 Create GitHub Repo (add contributors)
 
