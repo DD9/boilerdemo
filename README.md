@@ -121,7 +121,7 @@ $table_prefix  = 'wp_';
 
 define('WPLANG', '');
 
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
 
 if ( !defined('ABSPATH') )
   define('ABSPATH', dirname(__FILE__) . '/');
