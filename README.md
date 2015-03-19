@@ -1,5 +1,5 @@
-# dd9boiler
-Boiler dev and demo site: http://boiler.dd9.com
+# boilerdemo
+Repo for the Boiler demo site: http://boiler.dd9.com
 
 ----------
 
