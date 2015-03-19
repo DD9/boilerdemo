@@ -20,15 +20,15 @@ Create GitHub Repo (add contributors)
 
 --
 
-Create WP install on WPengine, add SSH keys
+Create WP install on WPengine (dd9boiler), add SSH keys
 
 --
 
-Create folder on local system (i.e. /clients/dd9boiler/) and navigate to that folder
+Create folder on local system (i.e. /sites/boilerdemo/) and navigate to that folder
 
 ```
 
-git clone git@github.com:dd9/dd9boiler.git .
+git clone git@github.com:dd9/boilerdemo.git .
  
 ```
 
