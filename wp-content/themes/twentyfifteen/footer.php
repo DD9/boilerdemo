@@ -22,7 +22,7 @@
 				 */
 				do_action( 'twentyfifteen_credits' );
 			?>
-			<a href="http://dd9.com">DD9.com</a>
+			<a href="http://dd9.com" target="_blank">DD9.com</a>
 		</div><!-- .site-info -->
 	</footer><!-- .site-footer -->
 
