@@ -1,0 +1,3 @@
+[submodule "wp-content/themes/boiler"]
+	path = wp-content/themes/boiler
+	url = https://github.com/DD9/boiler
