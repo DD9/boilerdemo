@@ -61,7 +61,7 @@ ssh git@git.wpengine.com info
 
 --
 
-#### WORKFLOW: MAKING COMMITS
+#### GITHUB WORKFLOW
 **For more detailed info: [Github Primer](http://dd9.com/2012/07/git-primer/)**
 
 
@@ -92,7 +92,7 @@ $ git add -u .
 ``` 
 
 
-6) Commit a group of changes with a message
+6) Commit your group of changes with a message
 ```
 $ git commit -m 'commit message here'
 ```
@@ -110,7 +110,7 @@ $ git push
 ```
 
 
-9) To then push your changes to production:
+9) Then you can push your changes to production:
 ```
 $ git push production
 ```
