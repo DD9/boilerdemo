@@ -54,7 +54,7 @@
 
           <a class="navbar-brand" href="<?php bloginfo( 'url' ) ?>/" title="<?php bloginfo( 'name' ) ?>" rel="homepage">
             <img src="<?= get_bloginfo('template_directory'); ?>/library/images/DD9_logo_v3.png" id="logo" alt="<?php bloginfo( 'name' ) ?> Logo" />
-          DD9er!
+          DD9er!!!!!!!!!!!!!!!!!!!!!!!
           </a>
 
         </div><!-- /navbar-header -->
