@@ -64,52 +64,43 @@ ssh git@git.wpengine.com info
 #### WORKFLOW: MAKING COMMITS
 **For more detailed info: [Github Primer](http://dd9.com/2012/07/git-primer/)**
 
-```
-*Open Terminal and navigate to the correct directory*
-$ cd /path/to/directory 
+
+*1) Open Terminal and navigate to the correct directory*
+```$ cd /path/to/directory```
+
+
+*2) Check the status of the directory at any time*
+```$ git status```
+
+
+*3) Make some changes*
+
+
+*4) To add changes for new and existing files:*
+```$ git add .```
+
+
+*5) To remove deleted files: *
+```$ git add -u .``` 
+
+
+*6) Commit a group of changes with a message*
+```$ git commit -m 'commit message here'```
+
+
+*7) Every so often, and **ALWAYS** before "git push," merge any changes that might have been made by someone else*
+```$ git pull --rebase```
+
+
+*8) Once you are ready (doesn't need to be every commit) and have run "git pull --rebase", push your changes to github*
+```$ git push```
+
+
+*9) To then push your changes to production:*
+```$ git push production```
+
 
 ----
-
-*Check the status of the directory at any time*
-$ git status
-
-----
-
-*make some changes*
-
-----
-
-*To add changes for new and existing files:*
-$ git add . 
-
-----
-
-*To remove deleted files: *
-$ git add -u . 
-
-----
-
-*Commit a group of changes with a message*
-$ git commit -m "commit message here"
-
-----
-
-*Every so often, and **ALWAYS** before "git push," merge any changes that might have been made by someone else*
-$ git pull --rebase
-
-----
-
-*Once you are ready (doesn't need to be every commit) and have run "git pull --rebase", push your changes to github*
-$ git push
-
-----
-
-*To then push your changes to production:*
-$ git push production 
-
-```
-
---
 
 **First Commit** as is a little different: $ git push production master
 
