@@ -62,49 +62,49 @@ ssh git@git.wpengine.com info
 --
 
 #### WORKFLOW: MAKING COMMITS
-** Also refer to: [Github Primer](http://dd9.com/2012/07/git-primer/)**
+**For more detailed info: [Github Primer](http://dd9.com/2012/07/git-primer/)**
 
 ```
-* Open Terminal and navigate to the correct directory *
+*Open Terminal and navigate to the correct directory*
 $ cd /path/to/directory 
 
 ----
 
-* Check the status of the directory at any time *
+*Check the status of the directory at any time*
 $ git status
 
 ----
 
-* make some changes *
+*make some changes*
 
 ----
 
-* To add changes for new and existing files: *
+*To add changes for new and existing files:*
 $ git add . 
 
 ----
 
-* To remove deleted files: *
+*To remove deleted files: *
 $ git add -u . 
 
 ----
 
-* Commit a group of changes with a message *
+*Commit a group of changes with a message*
 $ git commit -m "commit message here"
 
 ----
 
-* Every so often, and **ALWAYS** before "git push," merge any changes that might have been made by someone else *
+*Every so often, and **ALWAYS** before "git push," merge any changes that might have been made by someone else*
 $ git pull --rebase
 
 ----
 
-* Once you are ready (doesn't need to be every commit) and have run "git pull --rebase", push your changes to github *
+*Once you are ready (doesn't need to be every commit) and have run "git pull --rebase", push your changes to github*
 $ git push
 
 ----
 
-* To then push your changes to production: *
+*To then push your changes to production:*
 $ git push production 
 
 ```
