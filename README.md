@@ -118,7 +118,7 @@ $ git push production
 
 ----
 
-**First Commit** as is a little different: $ git push production master
+**Note** First Commitis a little different: `$ git push production master`
 
 
 ## Local Configurations 
