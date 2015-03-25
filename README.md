@@ -61,7 +61,7 @@ ssh git@git.wpengine.com info
 
 --
 
-##### Workflow: Making Commits*
+#### WORKFLOW: MAKING COMMITS
 ** Also refer to: [Github Primer](http://dd9.com/2012/07/git-primer/)**
 
 ```
@@ -70,7 +70,7 @@ $ cd /path/to/directory
 
 ----
 
-* Check the status of the directory *
+* Check the status of the directory at any time *
 $ git status
 
 ----
