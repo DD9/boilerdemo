@@ -70,34 +70,48 @@ ssh git@git.wpengine.com info
 
 
 *2) Check the status of the directory at any time*
-```$ git status```
+```
+$ git status
+```
 
 
 *3) Make some changes*
 
 
 *4) To add changes for new and existing files:*
-```$ git add .```
+```
+$ git add .
+```
 
 
 *5) To remove deleted files: *
-```$ git add -u .``` 
+```
+$ git add -u .
+``` 
 
 
 *6) Commit a group of changes with a message*
-```$ git commit -m 'commit message here'```
+```
+$ git commit -m 'commit message here'
+```
 
 
 *7) Every so often, and **ALWAYS** before "git push," merge any changes that might have been made by someone else*
-```$ git pull --rebase```
+```
+$ git pull --rebase
+```
 
 
 *8) Once you are ready (doesn't need to be every commit) and have run "git pull --rebase", push your changes to github*
-```$ git push```
+```
+$ git push
+```
 
 
 *9) To then push your changes to production:*
-```$ git push production```
+```
+$ git push production
+```
 
 
 ----
