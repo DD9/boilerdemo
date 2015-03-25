@@ -9,6 +9,10 @@ _notes
 _scratch
 /wp-config-production.php
 /wp-config-local.php
+.htaccess
+.htaccess-local
+.htaccess-production
+
 
 # wordpress specific
 wp-config.php
