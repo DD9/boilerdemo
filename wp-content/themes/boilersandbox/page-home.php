@@ -11,7 +11,8 @@ Template Name: Home Page Template
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <h1>Boiler for Wordpress</h1>
-        <p>DD9 starter theme based on Brew, Bones and Bootstrap 3</p>
+        <p><?php the_field('hero_tagline'); ?></p>
+        <!--<p>DD9 starter theme based on Brew, Bones and Bootstrap 3</p>-->
         <p><a href="https://github.com/DD9/dd9boiler" target="_blank" class="btn btn-default btn-lg">Github</a>
           <a href="http://dd9.com" target="_blank" class="btn btn-lg btn-primary">DD9</a></p>
       </div>
