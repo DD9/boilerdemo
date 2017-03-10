@@ -28,7 +28,7 @@ Create folder on local system (i.e. /sites/boilerdemo/) and navigate to that fol
 
 ```
 
-git clone git@github.com:dd9/boilerdemo.git .
+git clone git@github.com:todditron/boilerdemo.git .
  
 ```
 
@@ -146,8 +146,8 @@ define('DB_HOST','localhost');
 define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
 
-define('WP_HOME','http://localhost/');
-define('WP_SITEURL','http://localhost/');
+define('WP_HOME','http://boilerdemo.localhost/');
+define('WP_SITEURL','http://boilerdemo.localhost/');
 
 define('AUTH_KEY',         'put your unique phrase here');
 define('SECURE_AUTH_KEY',  'put your unique phrase here');
