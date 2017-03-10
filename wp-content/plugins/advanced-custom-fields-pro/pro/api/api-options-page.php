@@ -36,7 +36,7 @@ function acf_get_valid_options_page( $page = '' ) {
 	
 	
 	// defaults
-	$page = acf_parse_args($page, array(
+	$page = wp_parse_args($page, array(
 		'page_title' 	=> '',
 		'menu_title'	=> '',
 		'menu_slug' 	=> '',
@@ -44,7 +44,10 @@ function acf_get_valid_options_page( $page = '' ) {
 		'parent_slug'	=> '',
 		'position'		=> false,
 		'icon_url'		=> false,
-		'redirect'		=> true
+		'redirect'		=> true,
+		'post_id'		=> 'options',
+		'autoload'		=> false,
+		'update_button'	=> __('Update', 'acf')
 	));
 	
 	
