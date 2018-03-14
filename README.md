@@ -120,7 +120,7 @@ Update `wp-config.php` to the following
 
 <?php
 
-define('DB_NAME','wp_boilerdemo');
+define('DB_NAME','wp_dd9boiler');
 define('DB_USER','root');
 define('DB_PASSWORD','[[[YOUR_PASSWORD_HERE]]]');
 // define('DB_HOST','localhost');
@@ -128,8 +128,8 @@ define('DB_HOST', '127.0.0.1');
 define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
 
-define('WP_HOME','http://clarice.localhost/');
-define('WP_SITEURL','http://clarice.localhost/');
+define('WP_HOME','http://boilerdemo.localhost/');
+define('WP_SITEURL','http://boilerdemo.localhost/');
 
 $table_prefix  = 'wp_';
 
