@@ -108,7 +108,7 @@ $ git push production master
 
 --
 
-Future Commits as per usual (i.e. git push production )
+Future Commits as per usual (i.e. `git push` `git push production` )
 
 
 
