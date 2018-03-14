@@ -94,6 +94,23 @@ ssh git@git.wpengine.com info
 
 --
 
+First Commit
+
+```
+$ git add . 
+
+$ git commit -m "initial commit"
+
+$ git push
+
+$ git push production master
+```
+
+--
+
+Future Commits as per usual (i.e. git push production )
+
+
 
 ## Local Configurations (TGD)
 
