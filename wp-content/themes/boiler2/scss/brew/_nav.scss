@@ -1,0 +1,55 @@
+/******************************************************************
+Author: DD9
+Stylesheet: Header & Navigation
+******************************************************************/
+
+/* Main Header and Nav: Bootstrap overrides
+================================================== */
+#site-header {
+	.navbar {
+		border: none;
+		margin-bottom: 0;
+	}
+	.navbar-brand{
+		padding-top: 5px;
+		padding-bottom: 5px;
+		width: 95px;
+	}
+}
+
+/* Dropdown menus */
+// Fix non-wrapping menu items
+.dropdown-menu {
+	line-height: 18px;
+	> li {
+		margin-bottom: 3px;
+	}
+	> li > a {
+		white-space: normal;
+		line-height: inherit;
+	}
+}
+
+/* Primary Menu
+================================================== */
+#menu-primary {
+
+}
+
+/* Current page highlighting 
+================================================== */
+#menu-primary {
+	> .active > a,
+  > li.current-menu-item,
+  > li.current-menu-parent,
+  > li.current-menu-ancestor {
+  	
+	  > a, > a:hover, > a:focus {
+      color: $link-color;
+    }
+  }  
+
+  .dropdown-menu > li.active > a {
+    color: $link-color;
+  }
+}

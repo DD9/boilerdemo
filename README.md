@@ -1,60 +1,30 @@
 # boilerdemo
-Repo for the Boiler demo site: https://boiler.dd9.com
-
-Due to complexities of submodule & subtree workflows, it is best to just clone copies of Boiler theme into `wp-content/themes/` and work on them as needed.
+Repo for the Boiler demo site: http://boiler.dd9.com
 
 ----------
 
-## Compile Boiler (NPM + GULP)
+## Current Config Notes
 
-Configure GULP to automate several tasks, starting with minifying vendor JS files and compiling LESS/SASS
+**boilerdemo** Boiler theme official submodule:
 
-### 1. Global Setup 
-Run through once on first use on current computer
+`wp-content/themes/boilerdemo`
 
-- Install **Node** https://nodejs.org/en/
-- Install **NPM** globally  `npm install npm -g` (Node will come installed with NPM)
-- Install **gulp** globally `npm install gulp -g`
-- Install **less** globally `npm install less -g`  
-- (TO-DO: Add SASS instructions)
-- Verify Installs
+**boilerplay** Boiler sandbox theme subtree for experimentation:
 
-```
-node -v
-npm -v
-gulp -v
-less -v
-```
-
-### 2. Theme Setup 
-Run once on first installation of theme
-
-- Navigate to theme directory and from command line `npm install`
-- Verify creation of /node_modules/ (which will be ignored by Git)
-
-### 3. Dev Setup 
-Run once every dev session
-
-- From the theme directory and from command line `gulp`
-- Verify gulp is monitoring for changes by tweaking .less and .js files
+`wp-content/themes/boilerplay`
 
 
-
-## Notes on Initial Setup (TGD/HC)
+## Notes on Initial Setup 
 
 Create GitHub Repo (add contributors)
 
 --
 
-Create WP install on WPengine (`dd9boiler`) 
+Create WP install on WPengine (dd9boiler), add SSH keys
 
 --
 
-Add GitPush SSH keys
-
---
-
-Create folder on local system (i.e. `/sites/boilerdemo/`) and navigate to that folder
+Create folder on local system (i.e. /sites/boilerdemo/) and navigate to that folder
 
 ```
 
@@ -64,15 +34,12 @@ git clone git@github.com:todditron/boilerdemo.git .
 
 --
 
-Create new SFTP credentials from WPE dashboard
+SFTP to WPengine and pull down almost entire site (files necessary for running WP locally) into local folder 
 
-SFTP to WPengine and pull down almost entire site (files necessary for running WP locally) into local folder.  Files include `wp-includes`, `wp-admin`, and most of the items in the root directory.
-
-Clean up `.gitignore` as needed, copy from recent project or pull fresh `.gitignore` file from here:
+Clean up .gitignore as needed, or pull fresh .gitignore file from here:
 
 http://wpengine.com/git/#toc_0
 
-Delete `Hyper DB` and other WPE-specific must-use plugins that may have tagged along (this is sometimes optional)
 
 --
 
@@ -94,44 +61,79 @@ ssh git@git.wpengine.com info
 
 --
 
-First Commit
+#### GITHUB WORKFLOW
+**For more detailed info: [Github Primer](http://dd9.com/2012/07/git-primer/)**
 
+
+1) Open Terminal and navigate to the correct directory
 ```
-$ git add . 
+$ cd /path/to/directory
+```
 
-$ git commit -m "initial commit"
 
+2) Check the status of the directory at any time
+```
+$ git status
+```
+
+
+3) Make some changes
+
+
+4) To add changes for new and existing files:
+```
+$ git add .
+```
+
+
+5) To remove deleted files:
+```
+$ git add -u .
+``` 
+
+
+6) Commit your group of changes with a message
+```
+$ git commit -m 'commit message here'
+```
+
+
+7) Every so often, and **ALWAYS** before "git push," merge any changes that might have been made by someone else
+```
+$ git pull --rebase
+```
+
+
+8) Once you are ready (doesn't need to be every commit) and have run "git pull --rebase", push your changes to github
+```
 $ git push
-
-$ git push production master
 ```
 
---
 
-Future Commits as per usual (i.e. `git push` `git push production` )
+9) Then you can push your changes to production:
+```
+$ git push production
+```
 
 
+----
 
-## Local Configurations (TGD)
+**Note:** First commit is a little different: `$ git push production master`
 
-Create project in SublimeText (or preferred editor)
+
+## Local Configurations 
 
 Configure XAMPP to load correct directory
 
-XAMPP on Windows
- - update `hosts` file to include local url in `C:/Windows/System32/divers/etc` using notepad (run as administrator)
- - update `httpd-vhosts.conf` to include local url permissions in `C:/xampp/apache/conf/extra` 
 
 --
 
 Export/Import Database from PHPmyAdmin as needed
 
+
 --
 
-
-Back-up `wp-config-production.php`, should be ignored by version control, but kept for safe keeping incase we accidently overrwrite production config file.
-
-Update `wp-config.php` to the following
+Update wp-config.php
 
 ```PHP
 
@@ -139,20 +141,27 @@ Update `wp-config.php` to the following
 
 define('DB_NAME','wp_dd9boiler');
 define('DB_USER','root');
-define('DB_PASSWORD','[[[YOUR_PASSWORD_HERE]]]');
-// define('DB_HOST','localhost');
-define('DB_HOST', '127.0.0.1');
+define('DB_PASSWORD','YOUR_PASSWORD_HERE');
+define('DB_HOST','localhost');
 define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
 
 define('WP_HOME','http://boilerdemo.localhost/');
 define('WP_SITEURL','http://boilerdemo.localhost/');
 
+define('AUTH_KEY',         'put your unique phrase here');
+define('SECURE_AUTH_KEY',  'put your unique phrase here');
+define('LOGGED_IN_KEY',    'put your unique phrase here');
+define('NONCE_KEY',        'put your unique phrase here');
+define('AUTH_SALT',        'put your unique phrase here');
+define('SECURE_AUTH_SALT', 'put your unique phrase here');
+define('LOGGED_IN_SALT',   'put your unique phrase here');
+define('NONCE_SALT',       'put your unique phrase here');
+
 $table_prefix  = 'wp_';
 
 define('WPLANG', '');
 
-// define('WP_DEBUG', false);
 define('WP_DEBUG', true);
 
 if ( !defined('ABSPATH') )
@@ -162,4 +171,3 @@ require_once(ABSPATH . 'wp-settings.php');
 ```
 
 --
-

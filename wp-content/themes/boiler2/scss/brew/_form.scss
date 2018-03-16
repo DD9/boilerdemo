@@ -1,0 +1,43 @@
+/******************************************************************
+Author: DD9
+Stylesheet: Forms
+******************************************************************/
+
+.form-control::-webkit-input-placeholder { color: $gray-600; }
+.form-control:-moz-placeholder { color: $gray-600; }
+.form-control::-moz-placeholder { color: $gray-600; }
+.form-control:-ms-input-placeholder { color: $gray-600; }
+
+.form-horizontal .control-label {
+	text-align: left;
+}
+
+select, textarea, 
+input[type="text"], 
+input[type="password"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="date"], 
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="number"], 
+input[type="email"], 
+input[type="url"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="color"], 
+.uneditable-input {
+  @extend .form-control;
+}
+
+legend {
+	font-size: 20px;
+}
+
+.input-group-btn {
+	.btn {
+		white-space: nowrap;
+	}
+}
+
