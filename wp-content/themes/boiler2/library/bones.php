@@ -142,22 +142,22 @@ function bones_scripts_and_styles() {
         // Register Scripts --------------------
 
         //Vendors JS, including Bootstrap core JS
-        wp_register_script( 'vendors-min', TMPL_URL . '/js/vendors.min.js', array('jquery'), '1.0', TRUE );
+        wp_register_script( 'vendors-min', TMPL_URL . '/js/vendors.min.js', array('jquery'), '2.0', TRUE );
 
         //Custom theme JS
         //wp_register_script( 'custom-js', TMPL_URL . '/js/scripts.js', array( 'jquery' ), '', true );
-        wp_register_script( 'custom-js', TMPL_URL . '/js/custom.min.js', array( 'jquery' ), '', true );
+        wp_register_script( 'custom-js', TMPL_URL . '/js/custom.min.js', array( 'jquery' ), '2', true );
 
 
         // Register Styles --------------------
-        wp_register_style( 'boiler-stylesheet', TMPL_URL . '/css/style.min.css', array(), '', 'all' );
-        wp_register_style( 'boiler-ie-only', TMPL_URL . '/css/ie.css', array(), '' );
-        wp_register_style( 'boiler-shame', TMPL_URL . '/css/shame.css', array(), '', 'all' ); //enable below as needed
+        wp_register_style( 'boiler-stylesheet', TMPL_URL . '/css/style.min.css', array(), '2', 'all' );
+        wp_register_style( 'boiler-ie-only', TMPL_URL . '/css/ie.css', array(), '2' );
+        wp_register_style( 'boiler-shame', TMPL_URL . '/css/shame.css', array(), '2', 'all' ); //enable below as needed
 
 
         //Register 3rd Party Hosted Libraries --------------------
-        wp_enqueue_script('bootstrap-popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js', array( 'jquery' ), '1.12.3', true );
-        wp_register_style('font-awesome-cdn', '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', array(), '4.4.0', 'all' );
+        wp_enqueue_script('bootstrap-popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js', array( 'jquery' ), '2', true );
+        wp_register_style('font-awesome-cdn', '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', array(), '2', 'all' );
 
 
         //Enqueue styles  --------------------
