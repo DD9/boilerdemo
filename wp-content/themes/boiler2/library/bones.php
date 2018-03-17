@@ -162,7 +162,7 @@ function bones_scripts_and_styles() {
 
         //Enqueue styles  --------------------
         wp_enqueue_style( 'font-awesome-cdn' );
-        wp_enqueue_style( 'boiler-stylesheet' );
+        wp_enqueue_style( 'boiler-stylesheet', TMPL_URL . '/css/style.min.css', array(), "1");
 
 
         //Optional styles, enable as needed   --------------------
