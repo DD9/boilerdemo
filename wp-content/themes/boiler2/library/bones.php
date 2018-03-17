@@ -150,11 +150,11 @@ function bones_scripts_and_styles() {
 
         //Custom theme JS
         //wp_register_script( 'custom-js', TMPL_URL . '/js/scripts.js', array( 'jquery' ), '', true );
-        wp_register_script( 'custom-js', TMPL_URL . '/js/custom.min.js', array( 'jquery' ), filemtime( TMPL_URL . '/js/custom.min.js' ), true );
+        wp_register_script( 'custom-js', TMPL_URL . '/js/custom.min.js', array( 'jquery' ), "33", true );
 
 
         // Register Styles --------------------
-        wp_register_style( 'boiler-stylesheet', TMPL_URL . '/css/style.min.css', array(), filemtime( TMPL_URL . '/css/style.min.css' ), 'all' );
+        wp_register_style( 'boiler-stylesheet', TMPL_URL . '/css/style.min.css', array(), "33", 'all' );
         wp_register_style( 'boiler-ie-only', TMPL_URL . '/css/ie.css', array(), filemtime( TMPL_URL . '/css/ie.css' ) );
         wp_register_style( 'boiler-shame', TMPL_URL . '/css/shame.css', array(), filemtime( TMPL_URL . '/css/shame.css' ), 'all' ); //enable below as needed
 
