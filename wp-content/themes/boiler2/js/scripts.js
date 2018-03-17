@@ -132,4 +132,4 @@ if (!window.getComputedStyle) {
 	w.addEventListener( "devicemotion", checkTilt, false );
 })( this );
 
-console.log("3333");
+console.log("mememememeeeee");
