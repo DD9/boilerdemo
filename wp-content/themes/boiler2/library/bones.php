@@ -154,14 +154,14 @@ function bones_scripts_and_styles() {
 
 
         // Register Styles --------------------
-        wp_register_style( 'boiler-stylesheet', TMPL_URL . '/css/style.css', array(), filemtime( TMPL_URL . '/css/style.css') , 'all' );
+        wp_register_style( 'boiler-stylesheet', TMPL_URL . '/css/style.min.css', array(), '', 'all' );
         wp_register_style( 'boiler-ie-only', TMPL_URL . '/css/ie.css', array(), filemtime( TMPL_URL . '/css/ie.css')  );
         wp_register_style( 'boiler-shame', TMPL_URL . '/css/shame.css', array(), filemtime( TMPL_URL . '/css/shame.css') , 'all' ); //enable below as needed
 
 
         //Register 3rd Party Hosted Libraries --------------------
-        wp_enqueue_script('bootstrap-popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js', array( 'jquery' ), current_time('timestamp'), true );
-        wp_register_style('font-awesome-cdn', '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', array(), current_time('timestamp'), 'all' );
+        wp_enqueue_script('bootstrap-popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js', array( 'jquery' ), '', true );
+        wp_register_style('font-awesome-cdn', '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', array(), '', 'all' );
 
 
         //Enqueue styles  --------------------
