@@ -154,7 +154,7 @@ function bones_scripts_and_styles() {
 
 
         // Register Styles --------------------
-        wp_register_style( 'boiler-stylesheet', TMPL_URL . '/css/style.min.css', array(), '', 'all' );
+        wp_register_style( 'boiler-stylesheet', TMPL_URL . '/css/style.min.css', array(), '222222', 'all' );
         wp_register_style( 'boiler-ie-only', TMPL_URL . '/css/ie.css', array(), '', '/style.css'  );
         wp_register_style( 'boiler-shame', TMPL_URL . '/css/shame.css', array(), '', 'all' ); //enable below as needed
 
