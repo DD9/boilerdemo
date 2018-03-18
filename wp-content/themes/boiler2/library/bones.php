@@ -155,8 +155,8 @@ function bones_scripts_and_styles() {
 
         // Register Styles --------------------
         wp_register_style( 'boiler-stylesheet', TMPL_URL . '/css/style.min.css', array(), '', 'all' );
-        wp_register_style( 'boiler-ie-only', TMPL_URL . '/css/ie.css', array(), ''  );
-        wp_register_style( 'boiler-shame', TMPL_URL . '/css/shame.css', array(), '' , 'all' ); //enable below as needed
+        wp_register_style( 'boiler-ie-only', TMPL_URL . '/css/ie.css', array(), '', '/style.css'  );
+        wp_register_style( 'boiler-shame', TMPL_URL . '/css/shame.css', array(), '', 'all' ); //enable below as needed
 
 
         //Register 3rd Party Hosted Libraries --------------------
@@ -166,7 +166,7 @@ function bones_scripts_and_styles() {
 
         //Enqueue styles  --------------------
         wp_enqueue_style( 'font-awesome-cdn' );
-        wp_enqueue_style( 'boiler-stylesheet',  TMPL_URL . '/css/style.min.css', array(), filemtime(TMPL_URL . '/css/style.min.css'), all );
+        wp_enqueue_style( 'boiler-stylesheet' );
 
 
         //Optional styles, enable as needed   --------------------
@@ -181,8 +181,8 @@ function bones_scripts_and_styles() {
         //Enqueue scripts --------------------
         wp_enqueue_script( 'jquery' );
         wp_enqueue_script( 'bootstrap-popper' );
-        wp_enqueue_script( 'vendors-min', TMPL_URL . '/js/vendors.min.js', array('jquery'), filemtime(TMPL_URL . '/js/vendors.min.js'), true);
-        wp_enqueue_script( 'custom-js', TMPL_URL . '/js/custom.min.js', array('jquery'), filemtime(TMPL_URL . '/js/custom.min.js'), true );
+        wp_enqueue_script( 'vendors-min' );
+        wp_enqueue_script( 'custom-js' );
 
 
         // comment reply script for threaded comments
