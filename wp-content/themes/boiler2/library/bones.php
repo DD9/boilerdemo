@@ -146,17 +146,17 @@ function bones_scripts_and_styles() {
         // Register Scripts --------------------
 
         //Vendors JS, including Bootstrap core JS
-        wp_register_script( 'vendors-min', TMPL_URL . '/js/vendors.min.js', array('jquery'), current_time('timestamp'), TRUE );
+        wp_register_script( 'vendors-min', TMPL_URL . '/js/vendors.min.js', array('jquery'), filemtime( TMPL_URL . '/js/vendors.min.js') , TRUE );
 
         //Custom theme JS
         //wp_register_script( 'custom-js', TMPL_URL . '/js/scripts.js', array( 'jquery' ), '', true );
-        wp_register_script( 'custom-js', TMPL_URL . '/js/custom.min.js', array( 'jquery' ), current_time('timestamp'), true );
+        wp_register_script( 'custom-js', TMPL_URL . '/js/custom.min.js', array( 'jquery' ), filemtime( TMPL_URL . '/js/custom.min.js'), true );
 
 
         // Register Styles --------------------
-        wp_register_style( 'boiler-stylesheet', TMPL_URL . '/css/style.min.css', array(), current_time('timestamp'), 'all' );
-        wp_register_style( 'boiler-ie-only', TMPL_URL . '/css/ie.css', array(), current_time('timestamp') );
-        wp_register_style( 'boiler-shame', TMPL_URL . '/css/shame.css', array(), current_time('timestamp'), 'all' ); //enable below as needed
+        wp_register_style( 'boiler-stylesheet', TMPL_URL . '/css/style.min.css', array(), filemtime( get_stylesheet_directory() . '/style.css' ) , 'all' );
+        wp_register_style( 'boiler-ie-only', TMPL_URL . '/css/ie.css', array(), filemtime( get_stylesheet_directory() . '/style.css' )  );
+        wp_register_style( 'boiler-shame', TMPL_URL . '/css/shame.css', array(), filemtime( get_stylesheet_directory() . '/style.css' ) , 'all' ); //enable below as needed
 
 
         //Register 3rd Party Hosted Libraries --------------------
