@@ -154,9 +154,9 @@ function bones_scripts_and_styles() {
 
 
         // Register Styles --------------------
-        wp_register_style( 'boiler-stylesheet', TMPL_URL . '/css/style.min.css', array(), filemtime( get_stylesheet_directory() . '/style.css' ) , 'all' );
-        wp_register_style( 'boiler-ie-only', TMPL_URL . '/css/ie.css', array(), filemtime( get_stylesheet_directory() . '/style.css' )  );
-        wp_register_style( 'boiler-shame', TMPL_URL . '/css/shame.css', array(), filemtime( get_stylesheet_directory() . '/style.css' ) , 'all' ); //enable below as needed
+        wp_register_style( 'boiler-stylesheet', TMPL_URL . '/css/style.min.css', array(), filemtime( TMPL_URL . '/css/style.min.css') , 'all' );
+        wp_register_style( 'boiler-ie-only', TMPL_URL . '/css/ie.css', array(), filemtime( TMPL_URL . '/css/ie.css')  );
+        wp_register_style( 'boiler-shame', TMPL_URL . '/css/shame.css', array(), filemtime( TMPL_URL . '/css/shame.css') , 'all' ); //enable below as needed
 
 
         //Register 3rd Party Hosted Libraries --------------------
