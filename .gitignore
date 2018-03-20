@@ -14,7 +14,7 @@ _scratch
 .htaccess-production
 
 # theme development config
-
+wp-content/themes/boiler2/browser-sync-config.json
 
 # wordpress specific
 wp-config.php
