@@ -1,0 +1,4 @@
+{
+  "_comment": "Create a browser-sync-config.json file and copy your local WP_SITEURL (i.e. http://boiler.localhost/)below",
+  "proxy": "WP_SITEURL"
+}

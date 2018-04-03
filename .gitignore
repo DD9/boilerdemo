@@ -17,6 +17,9 @@ _scratch
 wp-content/themes/boiler2/browser-sync-config.json
 wp-content/themes/boiler2tgd/browser-sync-config.json
 
+node_modules/
+
+
 # wordpress specific
 wp-config.php
 wp-content/uploads/

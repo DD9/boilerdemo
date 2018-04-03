@@ -1,0 +1,79 @@
+/******************************************************************
+Author: DD9
+Stylesheet: Posts
+******************************************************************/
+
+
+/* Blog Content
+================================================== */
+.byline,
+.entry-meta {
+  color: $gray-600;
+  margin: 0;
+  font-size: $font-size-sm;
+  a {
+    color: inherit;
+  }
+}
+
+.entry-excerpt-meta {
+  margin: 0 0 5px;
+}
+
+
+/* Featured Image
+================================================== */
+.excerpt-img-bg {
+  height: 200px;
+  background-width: 100% !important;
+  background-size: cover !important;
+  background-repeat: none !important;
+  background-position: center center !important;
+
+  @include media-breakpoint-up(sm) {
+    height: 300px;
+  }
+}
+
+.excerpt-img { 
+  margin-bottom: 20px;
+  @include media-breakpoint-up(sm) {
+    margin-right: $line-height-base;
+    margin-bottom: 0;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Entry Footer
+================================================== */
+.article-footer  {
+  padding: 10px 0;
+  border-top: 1px solid $gray-300;
+  color: $gray-800;
+  font-size: 12px;
+  .commentnum {
+  	text-align: right;
+  	width: 30%;
+  	a {
+    	text-decoration: none;
+    	color: $gray-600;
+  	}
+  	a:hover {
+    	color: $gray-900;
+  	}
+  }
+  .tags {
+  	width: 70%;
+  }
+  .post-link {
+  	margin-top: -1px;
+  	padding-left: 10px;
+  	&:hover {
+    	text-decoration: none;
+  	}
+  }
+}
