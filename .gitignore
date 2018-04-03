@@ -13,10 +13,9 @@ _scratch
 .htaccess-local
 .htaccess-production
 
-# theme development config
-wp-content/themes/boiler2/browser-sync-config.json
-wp-content/themes/boiler2tgd/browser-sync-config.json
 
+# Boiler
+browser-sync-config.json
 node_modules/
 
 

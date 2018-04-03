@@ -1078,7 +1078,7 @@ legend{font-size:20px}
 .checkmark-list>ul,ul.checkmark-list{font-size:110%}
 .checkmark-list>ul li,ul.checkmark-list li{padding:0 0 10px 22px;position:relative}
 .checkmark-list>ul li::before,ul.checkmark-list li::before{content:"\f00c";color:#28a745;font-size:80%;height:10px;left:0;position:absolute;top:6px;width:15px}
-.homebanner{background-color:#007bff;text-align:center;color:#fff}
+.homebanner{background-color:#e83e8c;text-align:center;color:#fff}
 .author-img{float:left}
 .symple-clear-floats{clear:both}
 .symple-clearfix:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
