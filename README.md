@@ -3,28 +3,25 @@ Repo for the Boiler demo site: http://boiler.dd9.com
 
 ----------
 
-## Current Config Notes
 
-**boilerdemo** Boiler theme official submodule:
-
-`wp-content/themes/boilerdemo`
-
-**boilerplay** Boiler sandbox theme subtree for experimentation:
-
-`wp-content/themes/boilerplay`
+## Project-Specific Notes
 
 
-## Notes on Initial Setup 
+
+
+## Project Setup (w/ WPengine Workflow)
 
 Create GitHub Repo (add contributors)
 
 --
 
-Create WP install on WPengine (dd9boiler), add SSH keys
+Create WP install on WPengine (`dd9boiler`)
+
+Add GitPush Developer SSH keys
 
 --
 
-Create folder on local system (i.e. /sites/boilerdemo/) and navigate to that folder
+Create folder on local system (i.e. `/sites/boilerdemo/`) and navigate to that folder
 
 ```
 
@@ -34,12 +31,15 @@ git clone git@github.com:todditron/boilerdemo.git .
 
 --
 
+Create Project in Dreamweaver or other SFTP program
+
 SFTP to WPengine and pull down almost entire site (files necessary for running WP locally) into local folder 
 
-Clean up .gitignore as needed, or pull fresh .gitignore file from here:
+Clean up `.gitignore` as needed, or pull fresh `.gitignore` file from here:
 
 http://wpengine.com/git/#toc_0
 
+Delete `Hyper DB` and other WPE-specific must-use plugins that may have tagged along
 
 --
 
@@ -61,107 +61,48 @@ ssh git@git.wpengine.com info
 
 --
 
-#### GITHUB WORKFLOW
-**For more detailed info: [Github Primer](http://dd9.com/2012/07/git-primer/)**
 
+## Local Configurations (Mostly TGD)
 
-1) Open Terminal and navigate to the correct directory
-```
-$ cd /path/to/directory
-```
-
-
-2) Check the status of the directory at any time
-```
-$ git status
-```
-
-
-3) Make some changes
-
-
-4) To add changes for new and existing files:
-```
-$ git add .
-```
-
-
-5) To remove deleted files:
-```
-$ git add -u .
-``` 
-
-
-6) Commit your group of changes with a message
-```
-$ git commit -m 'commit message here'
-```
-
-
-7) Every so often, and **ALWAYS** before "git push," merge any changes that might have been made by someone else
-```
-$ git pull --rebase
-```
-
-
-8) Once you are ready (doesn't need to be every commit) and have run "git pull --rebase", push your changes to github
-```
-$ git push
-```
-
-
-9) Then you can push your changes to production:
-```
-$ git push production
-```
-
-
-----
-
-**Note:** First commit is a little different: `$ git push production master`
-
-
-## Local Configurations 
+Create project in SublimeText (or preferred editor)
 
 Configure XAMPP to load correct directory
 
+XAMPP on Windows
+ - update `hosts` file to include local url in `C:/Windows/System32/divers/etc` using notepad (run as administrator)
+ - update `httpd-vhosts.conf` to include local url permissions in `C:/xampp/apache/conf/extra` 
 
 --
 
 Export/Import Database from PHPmyAdmin as needed
 
-
 --
 
-Update wp-config.php
+
+Back-up `wp-config-production.php`, should be ignored by version control, but kept for safe keeping incase we accidently overrwrite production config file.
+
+Update and customize `wp-config.php` to the following
 
 ```PHP
 
 <?php
 
-define('DB_NAME','wp_dd9boiler');
+define('DB_NAME','wp_[PROJECT_DB_HERE]');
 define('DB_USER','root');
-define('DB_PASSWORD','YOUR_PASSWORD_HERE');
-define('DB_HOST','localhost');
+define('DB_PASSWORD','[YOUR_PASSWORD_HERE]');
+// define('DB_HOST','localhost');
+define('DB_HOST', '127.0.0.1');
 define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
 
-define('WP_HOME','http://boilerdemo.localhost/');
-define('WP_SITEURL','http://boilerdemo.localhost/');
-
-define('AUTH_KEY',         'put your unique phrase here');
-define('SECURE_AUTH_KEY',  'put your unique phrase here');
-define('LOGGED_IN_KEY',    'put your unique phrase here');
-define('NONCE_KEY',        'put your unique phrase here');
-define('AUTH_SALT',        'put your unique phrase here');
-define('SECURE_AUTH_SALT', 'put your unique phrase here');
-define('LOGGED_IN_SALT',   'put your unique phrase here');
-define('NONCE_SALT',       'put your unique phrase here');
+define('WP_HOME','http://PROJECTURL.localhost/');
+define('WP_SITEURL','http://PROJECTURL.localhost/');
 
 $table_prefix  = 'wp_';
 
 define('WPLANG', '');
 
+// define('WP_DEBUG', false);
 define('WP_DEBUG', true);
 
 if ( !defined('ABSPATH') )
@@ -171,3 +112,13 @@ require_once(ABSPATH . 'wp-settings.php');
 ```
 
 --
+
+## Install & Run Boiler Theme
+
+Create new theme directory (i.e. `/wp-content/themes/PROJECT_THEME/`)
+
+Copy Boiler2 theme into directory
+
+**Important: If you use `git clone git@github.com:dd9/boiler2.git .` to load Boiler2, make sure to delete `.git/` and `.gitignore` from the theme directory.** You will not be able to push the theme to WPengine if it is assocaited with another GitHub repository 
+
+Refer to the Boiler 2 ReadMe for instructions on configuring and running the theme https://github.com/DD9/boiler2
