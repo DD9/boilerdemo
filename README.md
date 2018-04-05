@@ -6,7 +6,7 @@ Repo for the Boiler demo site: http://boiler.dd9.com
 
 ## Project-Specific Notes
 
-[Project notes goe here]
+[Project notes go here]
 
 
 ## Project Setup (w/ WPengine Workflow)
