@@ -6,7 +6,7 @@ Repo for the Boiler demo site: http://boiler.dd9.com
 
 ## Project-Specific Notes
 
-
+[Project notes goe here]
 
 
 ## Project Setup (w/ WPengine Workflow)
@@ -115,10 +115,12 @@ require_once(ABSPATH . 'wp-settings.php');
 
 ## Install & Run Boiler Theme
 
+https://github.com/DD9/boiler2
+
 Create new theme directory (i.e. `/wp-content/themes/PROJECT_THEME/`)
 
 Copy Boiler2 theme into directory
 
 **Important: If you use `git clone git@github.com:dd9/boiler2.git .` to load Boiler2, make sure to delete `.git/` and `.gitignore` from the theme directory.** You will not be able to push the theme to WPengine if it is assocaited with another GitHub repository 
 
-Refer to the Boiler 2 ReadMe for instructions on configuring and running the theme https://github.com/DD9/boiler2
+Refer to the Boiler 2 ReadMe for instructions on configuring and running the Boiler2 theme 
