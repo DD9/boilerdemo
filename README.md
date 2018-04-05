@@ -78,7 +78,6 @@ Export/Import Database from PHPmyAdmin as needed
 
 --
 
-
 Back-up `wp-config-production.php`, should be ignored by version control, but kept for safe keeping incase we accidently overrwrite production config file.
 
 Update and customize `wp-config.php` to the following
